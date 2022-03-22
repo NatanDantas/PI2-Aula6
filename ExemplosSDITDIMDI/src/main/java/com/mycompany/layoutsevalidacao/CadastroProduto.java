@@ -142,6 +142,11 @@ public class CadastroProduto extends javax.swing.JFrame {
     }//GEN-LAST:event_txtQtdMaxActionPerformed
 
     private void btnConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfirmarActionPerformed
+        
+        if(txtNome.getText().trim().equals("")){
+            JOptionPane.showMessageDialog(this, "O campo nome é obrigatório!!");
+        }
+        
         try {
 
             int qtdMin = Integer.parseInt(txtQtdMin.getText());
